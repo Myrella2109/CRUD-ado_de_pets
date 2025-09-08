@@ -49,7 +49,7 @@ def cadastrar_pet(pets):
     nome = input("Nome do pet: ")
     idade = int(input("Idade do pet: "))
     raca = input("Raça do pet: ")
-    especie = input("Especie do pet: ")
+    especie = input("Espécie do pet: ")
 
     novo_pet = {
         'nome': nome,
@@ -69,22 +69,21 @@ def listar_pets(pets):
         return
     for id_pet, dados in pets.items():
         status = "Adotado" if dados['adotado'] else "Disponível"
-        print(f"\nID: {id_pet} | Nome: {dados['nome']} | Idade: {dados['idade']} | Raça: {dados['raca']} | Status: {status}")
+        print(f"\nID: {id_pet} | Nome: {dados['nome']} | Idade: {dados['idade']} | Raça: {dados['raca']} | Especie: {dados['especie']}| Status: {status}")
 
-# Função para buscar pet por nome
+# Função para buscar pet por nespecie
 def buscar_pet(pets):
-    nome_busca = input("Digite o nome do pet para buscar: ").lower()
+    especie_busca = input("Digite a espécie do pet para buscar: ").lower()
     encontrados = []
     for id_pet, dados in pets.items():
-        if dados['nome'].lower() == nome_busca:
+        if dados['especie'].lower() == especie_busca:
             encontrados.append((id_pet, dados))
-
     if encontrados:
         for id_pet, dados in encontrados:
             status = "Adotado" if dados['adotado'] else "Disponível"
-            print(f"\nID: {id_pet} | Nome: {dados['nome']} | Idade: {dados['idade']} | Raça: {dados['raca']} | Status: {status}")
+            print(f"\nID: {id_pet} | Nome: {dados['nome']} | Idade: {dados['idade']} | Raça: {dados['raca']} | Especie: {dados['especie']}| Status: {status}")
     else:
-        print("Nenhum pet com esse nome foi encontrado.")
+        print("Nenhum pet dessa espécie foi encontrado.")
 
 # Função para atualizar dados de um pet
 def atualizar_pet(pets):
@@ -145,7 +144,7 @@ def menu():
     print("\n--- SISTEMA DE ADOÇÃO DE PETS ---")
     print("1. Cadastrar pet")
     print("2. Listar pets")
-    print("3. Buscar pet por nome")
+    print("3. Buscar pet por espécie")
     print("4. Atualizar pet")
     print("5. Marcar como adotado")
     print("6. Remover pet")
