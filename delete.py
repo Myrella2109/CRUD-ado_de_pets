@@ -1,5 +1,7 @@
+from dicionario import pets
+
 # Função para remover um pet do sistema
-def remover_pet(pets):
+def remover_pet():
     try:
         id_pet = int(input("Digite o ID do pet para remover: "))
         if id_pet in pets:

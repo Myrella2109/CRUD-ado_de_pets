@@ -1,6 +1,9 @@
+from dicionario import pets
 
+# Calcula o próximo ID disponível
+proximo_id = max(pets.keys()) + 1 if pets else 1
 # Função para cadastrar um novo pet
-def cadastrar_pet(pets):
+def cadastrar_pet():
     global proximo_id
     nome = input("Nome do pet: ")
     idade = int(input("Idade do pet: "))

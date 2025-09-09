@@ -1,6 +1,6 @@
-
+from dicionario import pets
 # Função para listar todos os pets
-def listar_pets(pets):
+def listar_pets():
     if not pets:
         print("Nenhum pet cadastrado.")
         return
