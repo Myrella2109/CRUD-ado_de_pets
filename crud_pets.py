@@ -1,8 +1,9 @@
-from create import cadastrar_pet
-from read import listar_pets , buscar_pet
-from update import atualizar_pet , marcar_como_adotado
+from create import cadastrar_pet_poo
+from read import listar_pets, buscar_pet
+from update import atualizar_pet, marcar_como_adotado
 from delete import remover_pet
 from dicionario import pets
+from models import Pet
 
 
 # Função para exibir o menu
@@ -16,24 +17,25 @@ def menu():
     print("6. Remover pet")
     print("0. Sair")
 
+
 # Programa principal
 while True:
     menu()
     opcao = input("Escolha uma opção: ")
 
-    if opcao == '1':
-        cadastrar_pet()
-    elif opcao == '2':
+    if opcao == "1":
+        cadastrar_pet_poo()
+    elif opcao == "2":
         listar_pets()
-    elif opcao == '3':
+    elif opcao == "3":
         buscar_pet()
-    elif opcao == '4':
+    elif opcao == "4":
         atualizar_pet()
-    elif opcao == '5':
+    elif opcao == "5":
         marcar_como_adotado()
-    elif opcao == '6':
+    elif opcao == "6":
         remover_pet()
-    elif opcao == '0':
+    elif opcao == "0":
         print("Saindo do sistema. Até logo!")
         break
     else:
