@@ -11,7 +11,7 @@ class GerenciadorPets:
         conn = sqlite3.connect(self.nome_banco)
         cursor = conn.cursor()
         
-        # Criação da tabela (seu código banco.py migrado para o __init__)
+        # Criação da tabela 
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS pets (
             id INTEGER PRIMARY KEY, 
